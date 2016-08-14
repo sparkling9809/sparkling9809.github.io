@@ -4,18 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>第一篇 | Never give up</title>
+  <title>AngularJS路由 | Never give up</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从决定写些什么已经筹划很长一段时间了，但又不想将博客写在各主流媒体，因为数据始终在别人平台上毕竟不太放心，一个偶然的机会看到可以通过hexo自己搭建博客，且可以通过git将内容发布在github上，完全满足我的要求。花了半个小时搞定了，效果还是不错的。我希望自己能够坚持一直写下去，将我的生活，技术相关的内容都能记录下来，等将来闲下来回顾也算是一种财富了。">
+  <meta name="description" content="AngularJS非常适合用于创建单页面应用，那么如何在不同页面实现跳转则显得非常重要。使用路由以后，从浏览器看来整个项目就是一个html文件。那么在AngularJS中如何实现页面跳转呢，这里介绍AngularJS的路由模块UI-Router.
+UI-Router是AngularUI团队开发，目前已经取代AngularJS原有的ngRoute模块得到广泛使用。
+UI-Router路由的功能实际是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇">
-<meta property="og:url" content="http://sparkling9809.github.io/2016/08/12/第一篇/index.html">
+<meta property="og:title" content="AngularJS路由">
+<meta property="og:url" content="http://sparkling9809.github.io/2016/08/14/ui-router/index.html">
 <meta property="og:site_name" content="Never give up">
-<meta property="og:description" content="从决定写些什么已经筹划很长一段时间了，但又不想将博客写在各主流媒体，因为数据始终在别人平台上毕竟不太放心，一个偶然的机会看到可以通过hexo自己搭建博客，且可以通过git将内容发布在github上，完全满足我的要求。花了半个小时搞定了，效果还是不错的。我希望自己能够坚持一直写下去，将我的生活，技术相关的内容都能记录下来，等将来闲下来回顾也算是一种财富了。">
-<meta property="og:updated_time" content="2016-08-12T14:00:04.187Z">
+<meta property="og:description" content="AngularJS非常适合用于创建单页面应用，那么如何在不同页面实现跳转则显得非常重要。使用路由以后，从浏览器看来整个项目就是一个html文件。那么在AngularJS中如何实现页面跳转呢，这里介绍AngularJS的路由模块UI-Router.
+UI-Router是AngularUI团队开发，目前已经取代AngularJS原有的ngRoute模块得到广泛使用。
+UI-Router路由的功能实际是">
+<meta property="og:updated_time" content="2016-08-14T13:59:43.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇">
-<meta name="twitter:description" content="从决定写些什么已经筹划很长一段时间了，但又不想将博客写在各主流媒体，因为数据始终在别人平台上毕竟不太放心，一个偶然的机会看到可以通过hexo自己搭建博客，且可以通过git将内容发布在github上，完全满足我的要求。花了半个小时搞定了，效果还是不错的。我希望自己能够坚持一直写下去，将我的生活，技术相关的内容都能记录下来，等将来闲下来回顾也算是一种财富了。">
+<meta name="twitter:title" content="AngularJS路由">
+<meta name="twitter:description" content="AngularJS非常适合用于创建单页面应用，那么如何在不同页面实现跳转则显得非常重要。使用路由以后，从浏览器看来整个项目就是一个html文件。那么在AngularJS中如何实现页面跳转呢，这里介绍AngularJS的路由模块UI-Router.
+UI-Router是AngularUI团队开发，目前已经取代AngularJS原有的ngRoute模块得到广泛使用。
+UI-Router路由的功能实际是">
   
     <link rel="alternative" href="/atom.xml" title="Never give up" type="application/atom+xml">
   
@@ -205,11 +211,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-第一篇" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ui-router" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/12/第一篇/" class="article-date">
-  	<time datetime="2016-08-12T13:59:55.000Z" itemprop="datePublished">2016-08-12</time>
+      <a href="/2016/08/14/ui-router/" class="article-date">
+  	<time datetime="2016-08-14T13:25:33.000Z" itemprop="datePublished">2016-08-14</time>
 </a>
     </div>
   
@@ -222,7 +228,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第一篇
+      AngularJS路由
     </h1>
   
 
@@ -230,6 +236,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularJS/">angularJS</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -238,7 +248,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> 从决定写些什么已经筹划很长一段时间了，但又不想将博客写在各主流媒体，因为数据始终在别人平台上毕竟不太放心，一个偶然的机会看到可以通过hexo自己搭建博客，且可以通过git将内容发布在github上，完全满足我的要求。花了半个小时搞定了，效果还是不错的。我希望自己能够坚持一直写下去，将我的生活，技术相关的内容都能记录下来，等将来闲下来回顾也算是一种财富了。</p>
+        <p>AngularJS非常适合用于创建单页面应用，那么如何在不同页面实现跳转则显得非常重要。使用路由以后，从浏览器看来整个项目就是一个html文件。那么在AngularJS中如何实现页面跳转呢，这里介绍AngularJS的路由模块UI-Router.</p>
+<p>UI-Router是AngularUI团队开发，目前已经取代AngularJS原有的ngRoute模块得到广泛使用。</p>
+<p>UI-Router路由的功能实际是让单页面的内容可以自由控制，每块需要变化的内容可以用<code>&lt;div ui-view&gt;&lt;/div&gt;</code>来单独控制，这样使得页面的变化非常灵活。一般来说，用UI-Router来控制路由的步骤如下几步：</p>
+<ol>
+<li>index.html文件中添加UI-Router的js文件（angular-ui-router.min.js）</li>
+<li><p>在创建angularJS应用时，加入对ui.router的依赖</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myApp = angular.module(<span class="string">"myApp"</span>, [<span class="string">'ui.router'</span>]);</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置路由</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">"myApp"</span>).config(<span class="function"><span class="keyword">function</span>(<span class="params">$stateProvider, $urlRouterProvider</span>)</span>&#123;</div><div class="line">	</div><div class="line">	$urlRouterProvider.otherwise(<span class="string">"/home"</span>);</div><div class="line">	</div><div class="line">	$stateProvider.state(<span class="string">"home"</span>,&#123;</div><div class="line">		url:<span class="string">"/home"</span>,</div><div class="line">		templateUrl:<span class="string">"home.html"</span>,</div><div class="line">		controller:<span class="string">"homeCtrl"</span></div><div class="line">	&#125;)</div><div class="line">	.state(<span class="string">"about"</span>, &#123;</div><div class="line">		</div><div class="line">		url: <span class="string">'/about'</span>,</div><div class="line">        templateUrl:<span class="string">"about.html"</span>,</div><div class="line">        controller:<span class="string">"aboutCtrl"</span></div><div class="line">	&#125;);	</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>以上配置共设置了2个页面，一个是home.html，另外一个为about.html，分别对应的控制器为homeCtrl和aboutCtrl。<code>$stateProvider.state()</code>的第一个参数为状态的名字（UI-Router是基于状态来实现跳转的），第二个参数为一个Javascript对象，url为状态对应的url（浏览器地址栏中显示），templateUrl对应要显示的html文件路径，controller为html对应的控制器。</p>
+<ol>
+<li>在index.html中插入<code>&lt;div ui-view&gt;&lt;/div&gt;</code>标签，用来显示路由的页面内容。</li>
+</ol>
+<p>UI-Router实现跳转有两种方式：</p>
+<ol>
+<li><p>页面超链接跳转<br>比如要在home.html中加入一个超链接，点击以后跳转到about.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">ui-sref</span>=<span class="string">'about'</span>&gt;</span>跳转到about<span class="tag">&lt;/<span class="name">about</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>控制器跳转<br>这种方式最灵活，需要在控制器的函数中调用<code>$state.go(&#39;about&#39;)</code>方法。</p>
+</li>
+</ol>
 
       
     </div>
@@ -248,15 +281,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/08/12/R/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          R 读取和保存CSV文件
-        
-      </div>
-    </a>
   
+    <a href="/2016/08/13/周末观影/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">周末观影</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -289,7 +318,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="第一篇" data-title="第一篇" data-url="http://sparkling9809.github.io/2016/08/12/第一篇/"></div>
+	<div class="ds-thread" data-thread-key="ui-router" data-title="AngularJS路由" data-url="http://sparkling9809.github.io/2016/08/14/ui-router/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
